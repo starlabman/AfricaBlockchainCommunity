@@ -28,22 +28,22 @@ const slides = [
     title: "Webinars",
     text: "Every Saturday at 7PM, join our live webinars to learn from top minds in Web3.",
     image: "/corporate-businessman-giving-presentation-large-audience-1.png",
-    // webinarContents: [
-    //   {
-    //     badge: "📅 Every Saturday – 7PM",
-    //     host: "👤 Hosted by Kodjo Labore",
-    //     text: "Learn the fundamentals of Blockchain every weekend.",
-    //     ctaText: "Join the Webinar",
-    //     ctaLink: "https://example.com/webinar"
-    //   },
-    //   {
-    //     badge: "🎤 Live AMA",
-    //     host: "🎯 With guest experts",
-    //     text: "Get your questions answered live.",
-    //     ctaText: "Join the AMA",
-    //     ctaLink: "https://example.com/ama"
-    //   }
-    // ]
+    webinarContents: [
+      {
+        badge: "📅 Every Saturday – 7PM",
+        host: "👤 Hosted by Kodjo Labore",
+        text: "Learn the fundamentals of Blockchain every weekend.",
+        ctaText: "Join the Webinar",
+        ctaLink: "https://example.com/webinar"
+      },
+      {
+        badge: "🎤 Live AMA",
+        host: "🎯 With guest experts",
+        text: "Get your questions answered live.",
+        ctaText: "Join the AMA",
+        ctaLink: "https://example.com/ama"
+      }
+    ]
   },
 
   {
@@ -125,6 +125,7 @@ export const PartnershipsSection = (): JSX.Element => {
             ))}
           </div>
 
+          {/* Contenu animé (texte, badges, boutons, etc.) */}
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -132,52 +133,49 @@ export const PartnershipsSection = (): JSX.Element => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className="absolute w-[408px] bottom-[112px] left-10 text-white z-10 bg-gradient-to-r from-black/70 via-black/50 to-transparent p-5 rounded-xl shadow-lg backdrop-blur-sm group"
+              className="absolute flex gap-4 bottom-[80px] left-10 right-10 z-10"
             >
               {/* Bloc principal */}
-              <h2 className="whitespace-nowrap font-normal text-white text-[34px] tracking-[-0.72px] leading-normal mb-3 group-hover:text-yellow-400 transition-colors duration-300">
-                {slide.title}
-              </h2>
-              <p className="font-normal text-white text-lg tracking-[-0.72px] leading-normal mb-4">
-                {slide.text}
-              </p>
+              <div className="w-1/2 bg-black/70 p-6 rounded-2xl shadow-lg backdrop-blur-sm group">
+                <h2 className="whitespace-nowrap font-normal text-white text-[34px] tracking-[-0.72px] leading-normal mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+                  {slide.title}
+                </h2>
+                <p className="font-normal text-white text-lg tracking-[-0.72px] leading-normal">
+                  {slide.text}
+                </p>
+              </div>
 
-              {/* Si c'est un slide Webinars, afficher les blocs secondaires */}
-              {/* {slide.title === "Webinars" && Array.isArray(slide.webinarContents) && (
-                <div className="mt-6 grid gap-4">
-                  {slide.webinarContents.map((content, idx) => (
+              {/* Blocs secondaires si disponibles */}
+              {slide.title === "Webinars" && slide.webinarContents && (
+                <div className="w-1/2 flex flex-col gap-4">
+                  {slide.webinarContents.map((item, index) => (
                     <div
-                      key={idx}
-                      className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:border-yellow-400 transition-all duration-300"
+                      key={index}
+                      className="bg-white/10 backdrop-blur-lg text-white p-5 rounded-xl shadow-md"
                     >
-                      {content.badge && (
-                        <div className="bg-yellow-400 text-black text-xs font-semibold px-3 py-1 rounded-full inline-block mb-2">
-                          {content.badge}
+                      {item.badge && (
+                        <div className="bg-white text-black text-xs px-3 py-1 rounded-full mb-2 inline-block">
+                          {item.badge}
                         </div>
                       )}
-                      {content.host && (
-                        <p className="text-white text-sm mb-1 font-medium">{content.host}</p>
-                      )}
-                      {content.text && (
-                        <p className="text-white text-sm mb-2 leading-relaxed">{content.text}</p>
-                      )}
-                      {content.ctaText && content.ctaLink && (
+                      <p className="text-xl font-semibold mb-1">{item.title}</p>
+                      <p className="text-sm mb-2">{item.text}</p>
+                      {item.host && <p className="text-xs italic mb-1">{item.host}</p>}
+                      {item.ctaText && item.ctaLink && (
                         <a
-                          href={content.ctaLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block text-yellow-400 font-medium text-sm hover:underline"
+                          href={item.ctaLink}
+                          className="inline-block text-yellow-400 underline text-sm"
                         >
-                          {content.ctaText} →
+                          {item.ctaText}
                         </a>
                       )}
                     </div>
                   ))}
                 </div>
-              )} */}
-
+              )}
             </motion.div>
           </AnimatePresence>
+
 
 
           <div className="absolute bottom-[30px] right-10 flex gap-4 z-10">

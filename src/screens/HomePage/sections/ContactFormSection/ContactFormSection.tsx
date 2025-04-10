@@ -1,100 +1,140 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 import { Input } from "../../../../components/ui/input";
 import { Textarea } from "../../../../components/ui/textarea";
 
 export const ContactFormSection = (): JSX.Element => {
-  // Form field data for mapping
-  const inputFields = [
-    { id: "firstName", label: "First name", required: true },
-    { id: "lastName", label: "Last name", required: true },
-    { id: "email", label: "Email", required: true },
-    { id: "company", label: "Company or Organisation name", required: false },
-  ];
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xvgkdlpb", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        e.currentTarget.reset(); // vider le formulaire après soumission
+      } else {
+        alert("Une erreur s’est produite. Veuillez réessayer.");
+      }
+    } catch (error) {
+      alert("Erreur réseau. Réessayez plus tard.");
+    }
+
+    setIsSubmitting(false);
+  };
 
   return (
-    <div className="relative w-full bg-[#060606] rounded-2xl overflow-hidden">
-      <div className="relative">
-        {/* Background elements */}
-        <div className="relative bg-[url(/vector-270.svg)] bg-[100%_100%]">
-          <img className="w-full" alt="Group" src="/group-54.png" />
-        </div>
+    <div className="relative w-full bg-[#060606] rounded-2xl overflow-hidden py-16 px-8">
+      {/* Background elements */}
+      <img
+        className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-[1000px] opacity-10 pointer-events-none"
+        alt="Ellipse"
+        src="/ellipse-263.svg"
+      />
+      <img
+        className="absolute right-0 bottom-0 opacity-10"
+        alt="Vector"
+        src="/vector-267.svg"
+      />
 
-        <img
-          className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full"
-          alt="Ellipse"
-          src="/ellipse-263.svg"
-        />
-
-        <img
-          className="absolute right-0 bottom-0"
-          alt="Vector"
-          src="/vector-267.svg"
-        />
-
-        {/* Content container */}
-        <div className="relative z-10 p-8 flex flex-col">
-          {/* Heading section */}
+      {/* Content container */}
+      <div className="relative z-10 max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
           <div className="mb-8">
-            <div className="[font-family:'Product_Sans-Regular',Helvetica] font-normal text-[#4e5cbc] text-base mb-1">
-              Get in touch
-            </div>
-
-            <h2 className="[font-family:'Product_Sans-Regular',Helvetica] font-normal text-white text-[47.8px] tracking-[-0.72px] leading-[52.8px] mb-4">
-              Let&#39;s chat
+            <div className="text-[#4e5cbc] text-base mb-1">Get in touch</div>
+            <h2 className="text-white text-[40px] md:text-[48px] leading-[1.2] font-semibold mb-4">
+              Let’s chat
             </h2>
-
-            <p className="[font-family:'Product_Sans_Light-Regular',Helvetica] font-normal text-[#bebebe] text-base leading-[19.6px] max-w-[526px]">
+            <p className="text-[#bebebe] text-base leading-relaxed">
               We would love to answer your questions, discuss your ideas, or
-              collaborate with you to advance the blockchain ecosystem in
-              Africa. Whether you are interested in our programs, want to learn
-              more about our initiatives, or are looking to partner, our team is
-              here to help.
+              collaborate with you to advance the blockchain ecosystem in Africa.
+              Whether you are interested in our programs, want to learn more about
+              our initiatives, or are looking to partner, our team is here to help.
             </p>
           </div>
 
-          {/* Form section */}
           <Card className="bg-transparent border-none shadow-none">
             <CardContent className="p-0">
-              <div className="flex flex-wrap gap-[16px_10px]">
-                {/* Map through input fields */}
-                {inputFields.map((field) => (
-                  <div key={field.id} className="w-[308px]">
-                    <div className="relative">
-                      <Input
-                        className="h-[53px] bg-white rounded border border-solid border-[#d5d5e8]"
-                        placeholder={field.label}
-                      />
-                      {field.required && (
-                        <span className="absolute h-[17px] top-[3px] right-[12px] [font-family:'Product_Sans-Regular',Helvetica] font-normal text-[#ff4836] text-sm">
-                          *
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                ))}
-
-                {/* Message textarea */}
-                <div className="w-[626px]">
-                  <div className="relative">
-                    <Textarea
-                      className="h-[180px] bg-white rounded border border-solid border-[#d5d5e8]"
-                      placeholder="Mesage"
-                    />
-                    <span className="absolute h-[17px] top-[3px] right-[12px] [font-family:'Product_Sans-Regular',Helvetica] font-normal text-[#ff4836] text-sm">
-                      *
-                    </span>
-                  </div>
+              {isSubmitted ? (
+                <div className="text-green-500 text-lg font-medium">
+                  ✅ Merci ! Votre message a été envoyé avec succès.
                 </div>
-              </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                  {/* Row 1 */}
+                  <div className="flex flex-col md:flex-row gap-4">
+                    <Input
+                      name="firstName"
+                      required
+                      placeholder="First name *"
+                      className="bg-white h-[50px]"
+                    />
+                    <Input
+                      name="lastName"
+                      required
+                      placeholder="Last name *"
+                      className="bg-white h-[50px]"
+                    />
+                  </div>
 
-              {/* Submit button */}
-              <Button className="mt-6 bg-[#2d6ef7] text-neutral-100 rounded-[200px] px-10 py-2.5 [font-family:'Product_Sans-Regular',Helvetica] font-normal text-sm">
-                Submit
-              </Button>
+                  {/* Row 2 */}
+                  <div className="flex flex-col md:flex-row gap-4">
+                    <Input
+                      name="email"
+                      required
+                      type="email"
+                      placeholder="Email *"
+                      className="bg-white h-[50px]"
+                    />
+                    <Input
+                      name="company"
+                      placeholder="Company or Organisation name"
+                      className="bg-white h-[50px]"
+                    />
+                  </div>
+
+                  {/* Row 3 */}
+                  <Textarea
+                    name="message"
+                    required
+                    className="bg-white h-[160px]"
+                    placeholder="Message *"
+                  />
+
+                  {/* Submit */}
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="mt-2 bg-[#2d6ef7] text-neutral-100 rounded-[200px] px-10 py-2.5 text-sm"
+                  >
+                    {isSubmitting ? "Sending..." : "Submit"}
+                  </Button>
+                </form>
+              )}
             </CardContent>
           </Card>
+        </div>
+
+        {/* Right-side Image */}
+        <div className="flex justify-center items-center">
+          <img
+            src="/group-54.png"
+            alt="Contact illustration"
+            className="w-full max-w-md md:max-w-lg"
+          />
         </div>
       </div>
     </div>

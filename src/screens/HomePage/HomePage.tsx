@@ -48,7 +48,7 @@ export const HomePage = (): JSX.Element => {
         <PartnershipsSection />
 
         {/* Contact and General Info sections */}
-        <div className="w-full mt-16 md:mt-28">
+        <div className="w-full mt-28">
           <ContactFormSection />
           <GeneralInfoSection />
         </div>
