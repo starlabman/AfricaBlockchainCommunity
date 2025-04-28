@@ -5,65 +5,77 @@ export const GeneralInfoSection = (): JSX.Element => {
   const socialLinks = [
     {
       id: 1,
+      href: "https://twitter.com/afroblockchain_",
       src: "/lpyn0v6vjxpc4eim0cgpdmh32t8-svg.svg",
-      alt: "Social media icon",
+      alt: "Twitter",
     },
-    { id: 2, src: "/link---img.svg", alt: "Link img" },
-    { id: 3, src: "/link---img-1.svg", alt: "Link img" },
+    {
+      id: 2,
+      href: "https://linkedin.com/compagny/afroblockchain_",
+      src: "/link---img.svg",
+      alt: "LinkedIn",
+    },
+    {
+      id: 3,
+      href: "https://github.com/afroblockchain",
+      src: "/link---img-1.svg",
+      alt: "GitHub",
+    },
   ];
 
   // Footer links data
   const footerLinks = [
-    { id: 1, text: "Privacy Policy" },
-    { id: 2, text: "Cookie Policy" },
+    { id: 1, text: "Privacy Policy", href: "/privacy-policy" },
+    { id: 2, text: "Cookie Policy", href: "/cookie-policy" },
   ];
 
   return (
     <footer className="flex flex-col w-full items-start gap-20 px-20 py-[38px]">
       {/* Top row with logo and social media icons */}
       <div className="flex items-center justify-between w-full">
-        {/* Logo */}
+        {/* Logo agrandi */}
         <div className="flex items-center gap-2.5">
-          <div className="relative w-[40.95px] h-[50px] bg-[url(/vector-360.svg)] bg-[100%_100%]">
-            <div className="relative w-[25px] h-[25px] top-3 left-[7px] bg-[url(/intersect.svg)] bg-[100%_100%]" />
+          <div className="relative w-[60px] h-[70px] bg-[url(/vector-360.svg)] bg-[100%_100%]">
+            <div className="relative w-[30px] h-[30px] top-[18px] left-[15px] bg-[url(/intersect.svg)] bg-[100%_100%]" />
           </div>
         </div>
 
-        {/* Social media icons */}
+        {/* Social media icons avec liens */}
         <div className="flex items-center gap-6">
-          {socialLinks.map((link) =>
-            link.id === 1 ? (
-              <div
-                key={link.id}
-                className="relative w-[27px] h-[27px] bg-[url(/lpyn0v6vjxpc4eim0cgpdmh32t8-svg.svg)] bg-[100%_100%]"
-              />
-            ) : (
+          {socialLinks.map((link) => (
+            <a
+              key={link.id}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition"
+            >
               <img
-                key={link.id}
-                className="relative w-[27px] h-[27px]"
-                alt={link.alt}
                 src={link.src}
+                alt={link.alt}
+                className="w-[32px] h-[32px]"
               />
-            ),
-          )}
+            </a>
+          ))}
         </div>
       </div>
 
-      {/* Bottom row with copyright and policy links */}
+      {/* Bottom row */}
       <div className="flex items-center justify-between w-full">
-        {/* Copyright text */}
-        <div className="[font-family:'Product_Sans-Regular',Helvetica] font-normal text-[#6d6d88] text-sm tracking-[0] leading-[19.6px]">
+        <div className="font-normal text-[#6d6d88] text-sm leading-[19.6px]">
           © 2025 ABC.
         </div>
 
-        {/* Policy links */}
+        {/* Footer links avec <a> */}
         <div className="flex items-center gap-12">
           {footerLinks.map((link) => (
-            <div key={link.id} className="relative">
-              <div className="[font-family:'Inter',Helvetica] font-normal text-[#6d6d88] text-sm tracking-[0] leading-[19.6px] whitespace-nowrap">
-                {link.text}
-              </div>
-            </div>
+            <a
+              key={link.id}
+              href={link.href}
+              className="text-[#6d6d88] text-sm hover:text-white transition"
+            >
+              {link.text}
+            </a>
           ))}
         </div>
       </div>

@@ -23,11 +23,23 @@ export const HomePage = (): JSX.Element => {
           <div className="font-normal text-white text-xs tracking-[4.00px] leading-[16.8px] [font-family:'Inter',Helvetica] whitespace-nowrap">
             OUR PARTNERS
           </div>
-          <img
-            className="w-full md:w-[944px] h-auto md:h-[30px] object-contain"
-            alt="Partner logos"
-            src="/section-mask-group.svg"
-          />
+          <div className="w-full md:w-[944px] h-auto md:h-[30px] flex items-center justify-center gap-8">
+            {/* <img
+              className="h-8 object-contain brightness-0 invert"
+              alt="KillinGiants"
+              src="/partners/killingiants.png"
+            />
+            <img
+              className="h-8 object-contain brightness-0 invert"
+              alt="Propel"
+              src="/partners/propel.png"
+            /> */}
+            <img
+              className="h-[30px] object-contain"
+              alt="Partner logos"
+              src="/section-mask-group.svg"
+            />
+          </div>
         </section>
 
         <ComingSoonSection />

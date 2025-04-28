@@ -158,9 +158,9 @@ export const PartnershipsSection = (): JSX.Element => {
                           {item.badge}
                         </div>
                       )}
-                      <p className="text-xl font-semibold mb-1">{item.title}</p>
+                      <p className="text-xl font-semibold mb-1">{item.host}</p>
                       <p className="text-sm mb-2">{item.text}</p>
-                      {item.host && <p className="text-xs italic mb-1">{item.host}</p>}
+                      {item.host && <p className="text-xs italic mb-1">Join us with {item.host}</p>}
                       {item.ctaText && item.ctaLink && (
                         <a
                           href={item.ctaLink}

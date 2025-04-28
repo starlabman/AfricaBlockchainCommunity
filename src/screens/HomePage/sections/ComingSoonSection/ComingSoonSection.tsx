@@ -12,29 +12,33 @@ export const ComingSoonSection = (): JSX.Element => {
           className="bg-[#fcfcfc] text-[#2d6ef7] font-bold shadow-[0px_4px_100px_#9ca7ff] px-4 py-1.5"
         >
           <span className="[font-family:'Product_Sans-Bold',Helvetica] text-sm tracking-[-0.28px] leading-[19.3px]">
-            Comming soon
+            Coming soon
           </span>
         </Badge>
 
-        <div className="flex flex-col gap-2 max-w-[689px]">
-          <h2 className="[font-family:'Product_Sans-Regular',Helvetica] text-white text-[27.9px] tracking-[-0.48px] leading-[35.2px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing
+        <div className="flex flex-col gap-4 items-center text-center">
+          <h2 className="text-white text-2xl md:text-4xl font-normal [font-family:'Product_Sans-Regular',Helvetica]">
+            EthAfrique: Empowering African Ethereum Ecosystem
           </h2>
-
-          <p className="[font-family:'Product_Sans_Light-Regular',Helvetica] text-white text-base max-w-[685px]">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis
+          <p className="text-[#989898] text-base md:text-lg max-w-[600px] tracking-[-0.72px] [font-family:'Product_Sans_Light-Regular',Helvetica]">
+            Join us at EthAfrique, a groundbreaking initiative dedicated to fostering Ethereum adoption and blockchain innovation across Africa. 
+            Together, we're building a vibrant community of developers, entrepreneurs, and enthusiasts shaping the future of Web3 in Africa.
           </p>
         </div>
 
-        <Button
-          variant="link"
-          className="p-0 h-auto text-white hover:text-white/90 [font-family:'Product_Sans-Regular',Helvetica] text-base"
+        <a 
+          href="https://ethafrique.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
         >
-          Learn more
-          <ArrowRightIcon className="ml-2 h-4 w-4" />
-        </Button>
+          <Button
+            variant="link"
+            className="p-0 h-auto text-white hover:text-white/90 [font-family:'Product_Sans-Regular',Helvetica] text-base"
+          >
+            Learn more
+            <ArrowRightIcon className="ml-2 h-4 w-4" />
+          </Button>
+        </a>
       </div>
     </section>
   );
