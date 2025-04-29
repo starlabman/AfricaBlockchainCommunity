@@ -22,24 +22,37 @@ export const InitiativesSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="flex flex-col items-center justify-center gap-6 px-6 py-20 bg-white w-full md:px-[223px]">
-      <div className="font-normal text-2xl text-center tracking-[-0.48px] leading-[1.5] font-sans max-w-4xl">
-        {textContent.map((segment, index) => (
-          <span
-            key={index}
-            className={`${segment.highlight ? "text-black" : "text-[#aaaabe]"} tracking-[-0.12px]`}
-          >
-            {segment.text}
-          </span>
-        ))}
-      </div>
+    <section id="initiatives" className="w-full bg-white">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
+        <div className="flex flex-col items-center justify-center gap-6 sm:gap-8">
+          <div className="font-normal text-base sm:text-lg md:text-2xl text-center tracking-[-0.48px] leading-[1.6] font-sans max-w-4xl">
+            {textContent.map((segment, index) => (
+              <span
+                key={index}
+                className={`${
+                  segment.highlight ? "text-black font-medium" : "text-[#aaaabe]"
+                } tracking-[-0.12px] transition-colors duration-300`}
+              >
+                {segment.text}
+              </span>
+            ))}
+          </div>
 
-      <Button
-        variant="outline"
-        className="rounded-[100px] border-[#2d6ef7] text-[#2d6ef7] hover:bg-[#2d6ef7] hover:text-white transition-colors px-10 py-2.5 text-sm tracking-[-0.28px] leading-[19.3px] font-normal"
-      >
-        Learn About Us
-      </Button>
+          <Button
+            variant="outline"
+            className="rounded-[100px] border-[#2d6ef7] text-[#2d6ef7] hover:bg-[#2d6ef7] hover:text-white transition-all duration-300 px-6 sm:px-8 py-2.5 text-sm sm:text-base tracking-[-0.28px] leading-[1.2] font-normal hover:scale-105 hover:shadow-lg"
+            asChild
+          >
+            <a 
+              href="https://bento.me/africablockchaincommunity" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Learn About Us
+            </a>
+          </Button>
+        </div>
+      </div>
     </section>
   );
 };

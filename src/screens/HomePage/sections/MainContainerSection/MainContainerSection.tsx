@@ -6,10 +6,10 @@ export const MainContainerSection = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "About us", href: "#" },
-    { label: "Programs & Activities", href: "#" },
-    { label: "Oportunities", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "About us", href: "#initiatives" },
+    { label: "Programs & Activities", href: "#impact" },
+    { label: "Opportunities", href: "#coming-soon" },
+    { label: "Contact", href: "#info" },
   ];
 
   return (
@@ -63,14 +63,25 @@ export const MainContainerSection = (): JSX.Element => {
           <a
             key={index}
             href={item.href}
+            onClick={() => setIsMenuOpen(false)}
             className="font-normal text-white text-lg tracking-[0] leading-[24px] hover:text-gray-300 transition-colors w-full lg:w-auto text-center"
           >
             {item.label}
           </a>
         ))}
 
-        <Button className="w-full lg:w-auto px-8 py-3 text-lg bg-[#2d6ef7] rounded-[200px] shadow-[0px_0px_50px_#1e5effd4] font-normal text-white hover:bg-[#2d6ef7]/90 transition-colors">
-          Join us
+        <Button 
+          className="w-full lg:w-auto px-8 py-3 text-lg bg-[#2d6ef7] rounded-[200px] shadow-[0px_0px_50px_#1e5effd4] font-normal text-white hover:bg-[#2d6ef7]/90 transition-colors"
+          asChild
+        >
+          <a 
+            href="https://bento.me/africablockchaincommunity" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Join us
+          </a>
         </Button>
       </nav>
     </header>

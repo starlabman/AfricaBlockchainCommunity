@@ -95,15 +95,18 @@ export const HeroBannerSection = (): JSX.Element => {
               transition={{ duration: 0.8, delay: 1 }}
               className="flex flex-wrap gap-4 justify-center mt-6 md:mt-8"
             >
-              <a 
-                href="https://bento.me/africablockchaincommunity" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <Button 
+                className="px-8 py-3 text-lg bg-[#2d6ef7] rounded-[200px] shadow-[0px_0px_50px_#1e5effd4] font-normal text-white hover:bg-[#2d6ef7]/90 transition-colors"
+                asChild
               >
-                <Button className="px-8 md:px-10 py-2.5 bg-[#2d6ef7] rounded-[200px] text-sm shadow-[0px_0px_50px_#1e5effd4] [font-family:'Product_Sans-Regular',Helvetica] hover:bg-[#2d6ef7]/90 transition-colors">
+                <a 
+                  href="https://bento.me/africablockchaincommunity" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
                   Join us
-                </Button>
-              </a>
+                </a>
+              </Button>
 
               <Dialog>
                 <DialogTrigger asChild>
@@ -118,7 +121,7 @@ export const HeroBannerSection = (): JSX.Element => {
                   <div className="space-y-4">
                     <div className="p-4 bg-gray-100 rounded-lg">
                       <h3 className="font-semibold mb-2">Mobile Money</h3>
-                      <p className="text-sm">+123 456 7890</p>
+                      <p className="text-sm">+228 98244850/93742473</p>
                     </div>
                     <div className="p-4 bg-gray-100 rounded-lg">
                       <h3 className="font-semibold mb-2">EVM Address</h3>

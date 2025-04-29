@@ -12,30 +12,20 @@ import { TestimonialsSection } from "./sections/TestimonialsSection";
 
 export const HomePage = (): JSX.Element => {
   return (
-    <main className="bg-white  w-full">
+    <main className="bg-white w-full min-h-screen overflow-x-hidden">
       <div className="bg-white w-full relative">
         {/* Main sections in order based on the layout */}
         <MainContainerSection />
         <HeroBannerSection />
 
         {/* Partners bar */}
-        <section className="w-full h-auto md:h-[138px] bg-[#01093f] flex flex-col md:flex-row items-center justify-between p-6 md:px-[156px] gap-4 md:gap-0">
-          <div className="font-normal text-white text-xs tracking-[4.00px] leading-[16.8px] [font-family:'Inter',Helvetica] whitespace-nowrap">
+        <section className="w-full py-8 md:py-12 bg-[#01093f] flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-[156px] gap-6 md:gap-8">
+          <div className="font-normal text-white text-sm sm:text-base tracking-[4.00px] leading-[1.4] font-['Inter'] text-center md:text-left">
             OUR PARTNERS
           </div>
-          <div className="w-full md:w-[944px] h-auto md:h-[30px] flex items-center justify-center gap-8">
-            {/* <img
-              className="h-8 object-contain brightness-0 invert"
-              alt="KillinGiants"
-              src="/partners/killingiants.png"
-            />
+          <div className="w-full md:w-auto max-w-[944px] flex items-center justify-center gap-6 sm:gap-8 px-4 sm:px-6">
             <img
-              className="h-8 object-contain brightness-0 invert"
-              alt="Propel"
-              src="/partners/propel.png"
-            /> */}
-            <img
-              className="h-[30px] object-contain"
+              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
               alt="Partner logos"
               src="/section-mask-group.svg"
             />
@@ -46,8 +36,8 @@ export const HomePage = (): JSX.Element => {
         <InitiativesSection />
 
         {/* Image section */}
-        <section className="w-full flex justify-center my-4 md:my-8 px-4 md:px-8">
-          <div className="w-full max-w- aspect-[2.18/1] relative rounded-xl overflow-hidden">
+        <section className="w-full flex justify-center py-8 md:py-12 px-4 sm:px-6 lg:px-8">
+          <div className="w-full max-w-[1200px] aspect-[2.18/1] relative rounded-xl overflow-hidden">
             <div className="absolute inset-0 rounded-[18.32px] bg-[url(/image.png)] bg-cover bg-center" />
             <div className="absolute inset-0 [background:linear-gradient(180deg,rgba(30,94,255,0.2)_0%,rgba(8,29,81,0.2)_100%)]" />
           </div>
@@ -60,7 +50,7 @@ export const HomePage = (): JSX.Element => {
         <PartnershipsSection />
 
         {/* Contact and General Info sections */}
-        <div className="w-full mt-28">
+        <div className="w-full mt-16 sm:mt-20 md:mt-28">
           <ContactFormSection />
           <GeneralInfoSection />
         </div>
