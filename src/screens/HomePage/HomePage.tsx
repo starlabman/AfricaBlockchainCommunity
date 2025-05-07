@@ -14,7 +14,7 @@ export const HomePage = (): JSX.Element => {
   return (
     <main className="bg-white w-full min-h-screen overflow-x-hidden">
       <div className="bg-white w-full relative">
-        {/* Main sections in order based on the layout */}
+        {/* Main srections in order based on the layout */}
         <MainContainerSection />
         <HeroBannerSection />
 
