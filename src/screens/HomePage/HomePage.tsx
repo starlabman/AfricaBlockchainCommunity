@@ -24,6 +24,7 @@ export const HomePage = (): JSX.Element => {
             OUR PARTNERS
           </div>
           <div className="w-full md:w-auto max-w-[944px] flex items-center justify-center gap-6 sm:gap-8 px-4 sm:px-6">
+            {/* Just comment */}
             <img
               className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
               alt="Partner logos"
@@ -63,6 +64,7 @@ export const HomePage = (): JSX.Element => {
               className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
               alt="Partner logos"
               src="/ETHiopian.svg"
+
             />
            
           </div>
