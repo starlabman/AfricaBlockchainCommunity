@@ -5,33 +5,103 @@ const partnerLogos = [
   {
     id: 1,
     type: "background",
-    style: "bg-[url(/clip-path-group.png)]",
+    style: "bg-[url(/kilingiants.svg)]",
   },
   {
     id: 2,
     type: "image",
-    src: "/wwwbwrfpwng70lo521jtnoclezo-svg.svg",
+    src: "/ETHiopian.svg",
   },
   {
     id: 3,
     type: "image",
-    src: "/x8xm0ndkrxccgjm7mybomnul0-svg.svg",
+    src: "/CodeAfrica.png",
   },
   {
     id: 4,
     type: "background",
-    style: "bg-[url(/clip-path-group-1.png)]",
+    style: "bg-[url(/web3pak.svg)]",
   },
   {
     id: 5,
     type: "image",
-    src: "/xnqleexyakcolsbicsyab8t5kjk-svg.svg",
+    src: "/Propel-Logo-Black.png",
   },
   {
     id: 6,
     type: "image",
-    src: "/vpm4l8sqacurzrkpepionaybqje-svg.svg",
+    src: "/icp.svg",
   },
+  {
+    id: 7,
+    type: "image",
+    src: "/web3globalconference.svg"
+  },
+  {
+    id: 8,
+    type: "image",
+    src:"starknet.svg"
+  },
+  {
+    id: 9,
+    type: "image",
+    src: "web3bridge.jpg"
+  },
+  {
+    id: 10,
+    type:"image",
+    src: "python_Togo.png"
+  },
+  {
+    id: 11,
+    type:"image",
+    src: "stellar.png"
+  },
+  {
+    id: 12,
+    type:"image",
+    src: "BaseWorkshop.png"
+  },
+  {
+    id:13,
+    type: "image",
+    src: "dev3pack.png"
+  },
+  {
+    id:14,
+    type: "image",
+    src: "Africhain.png"
+  },
+  {
+    id:15,
+    type: "image",
+    src: "TrustWallet.png"
+  },
+  {
+    id:16,
+    type: "image",
+    src: "ElloQuest.png"
+  },
+  {
+    id:17,
+    type: "image",
+    src: "SuiAfrica.png"
+  },
+  {
+    id:18,
+    type: "image",
+    src: "SuiRDC.png"
+  },
+  {
+    id:19,
+    type: "image",
+    src: "SuiBenin.png"
+  },
+  {
+    id:19,
+    type: "image",
+    src: "EthNigeria.png"
+  }
 ];
 
 export const TestimonialsSection = (): JSX.Element => {

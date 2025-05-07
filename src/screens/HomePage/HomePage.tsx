@@ -27,8 +27,44 @@ export const HomePage = (): JSX.Element => {
             <img
               className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
               alt="Partner logos"
-              src="/section-mask-group.svg"
+              src="/web3bridge.jpg"
             />
+            <img
+              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
+              alt="Partner logos"
+              src="/kilingiants.svg"
+            />
+            <img
+              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
+              alt="Partner logos"
+              src="/stellar.png"
+            />
+            <img
+              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
+              alt="Partner logos"
+              src="/python_Togo.png"
+            />
+            <img
+              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
+              alt="Partner logos"
+              src="/EthNigeria.png"
+            />
+            <img
+              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
+              alt="Partner logos"
+              src="/ElloQuest.png"
+            />
+            <img
+              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
+              alt="Partner logos"
+              src="/web3globalconference.svg"
+            />
+            <img
+              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
+              alt="Partner logos"
+              src="/ETHiopian.svg"
+            />
+           
           </div>
         </section>
 
