@@ -120,16 +120,20 @@ export const HeroBannerSection = (): JSX.Element => {
                   </DialogHeader>
                   <div className="space-y-4">
                     <div className="p-4 bg-gray-100 rounded-lg">
-                      <h3 className="font-semibold mb-2">Mobile Money</h3>
+                      <h3 className="font-semibold mb-2">Mobile Money-(Flooz/MixByYas)</h3>
                       <p className="text-sm">+228 98244850/93742473</p>
                     </div>
                     <div className="p-4 bg-gray-100 rounded-lg">
                       <h3 className="font-semibold mb-2">EVM Address</h3>
-                      <p className="text-sm break-all">0x1234567890abcdef1234567890abcdef12345678</p>
+                      <p className="text-sm break-all">0x727F16ce207506F1856a3B137dd34de5fFf44C9a</p>
                     </div>
                     <div className="p-4 bg-gray-100 rounded-lg">
                       <h3 className="font-semibold mb-2">Solana Address</h3>
-                      <p className="text-sm break-all">ABC123DEF456GHI789JKL0...</p>
+                      <p className="text-sm break-all">AAdc8VaDKm1XmHkLetfgHWRjSXJHQndukh8qX2Tr3PHt</p>
+                    </div>
+                    <div className="p-4 bg-gray-100 rounded-lg">
+                      <h3 className="font-semibold mb-2">Bitcoin Address</h3>
+                      <p className="text-sm break-all">bc1qxszzgnty2m25u85vzf9n8t2jawnhpgqeaw4e45</p>
                     </div>
                   </div>
                 </DialogContent>
