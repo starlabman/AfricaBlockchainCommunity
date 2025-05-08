@@ -14,7 +14,7 @@ export const HomePage = (): JSX.Element => {
   return (
     <main className="bg-white w-full min-h-screen overflow-x-hidden">
       <div className="bg-white w-full relative">
-        {/* Main sections in order based on the layout */}
+        {/* Main srections in order based on the layout */}
         <MainContainerSection />
         <HeroBannerSection />
 
@@ -24,11 +24,49 @@ export const HomePage = (): JSX.Element => {
             OUR PARTNERS
           </div>
           <div className="w-full md:w-auto max-w-[944px] flex items-center justify-center gap-6 sm:gap-8 px-4 sm:px-6">
+            {/* Just comment */}
             <img
               className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
               alt="Partner logos"
-              src="/section-mask-group.svg"
+              src="/web3bridge.jpg"
             />
+            <img
+              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
+              alt="Partner logos"
+              src="/kilingiants.svg"
+            />
+            <img
+              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
+              alt="Partner logos"
+              src="/stellar.png"
+            />
+            <img
+              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
+              alt="Partner logos"
+              src="/python_Togo.png"
+            />
+            <img
+              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
+              alt="Partner logos"
+              src="/EthNigeria.png"
+            />
+            <img
+              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
+              alt="Partner logos"
+              src="/ElloQuest.png"
+            />
+            <img
+              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
+              alt="Partner logos"
+              src="/web3globalconference.svg"
+            />
+            <img
+              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
+              alt="Partner logos"
+              src="/ETHiopian.svg"
+
+            />
+           
           </div>
         </section>
 
