@@ -29,6 +29,11 @@ export const HomePage = (): JSX.Element => {
             <img
               className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
               alt="Partner logos"
+              src="/ETHAfrique2.png"
+            />
+            <img
+              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
+              alt="Partner logos"
               src="/web3bridge.jpg"
             />
             <img

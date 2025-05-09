@@ -3,6 +3,11 @@ import { motion } from "framer-motion";
 
 const partnerLogos = [
   {
+    id: 0,
+    type: "image",
+    src: "/ETHAfrique.png",
+  },
+  {
     id: 1,
     type: "background",
     style: "bg-[url(/kilingiants.svg)]",
@@ -101,6 +106,11 @@ const partnerLogos = [
     id: 20,
     type: "image",
     src: "EthNigeria.png"
+  },
+  {
+    id: 21,
+    type: "image",
+    src: "icphubs.png"
   }
 ];
 
