@@ -1,4 +1,4 @@
-import React from "react";
+
 import { ComingSoonSection } from "./sections/ComingSoonSection";
 import { ContactFormSection } from "./sections/ContactFormSection";
 import { GeneralInfoSection } from "./sections/GeneralInfoSection";
@@ -9,6 +9,7 @@ import { MainContainerSection } from "./sections/MainContainerSection";
 import { PartnershipsSection } from "./sections/PartnershipsSection";
 import { StatisticsSection } from "./sections/StatisticsSection";
 import { TestimonialsSection } from "./sections/TestimonialsSection";
+import { CoreTeamSection } from "./sections/CoreTeamSection";
 
 export const HomePage = (): JSX.Element => {
   return (
@@ -35,35 +36,18 @@ export const HomePage = (): JSX.Element => {
               alt="Partner logos"
               src="/kilingiants.svg"
             />
-            <img
-              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
-              alt="Partner logos"
-              src="/stellar.png"
-            />
+           
             <img
               className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
               alt="Partner logos"
               src="/python_Togo.png"
             />
+           
+
             <img
               className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
               alt="Partner logos"
-              src="/EthNigeria.png"
-            />
-            <img
-              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
-              alt="Partner logos"
-              src="/ElloQuest.png"
-            />
-            <img
-              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
-              alt="Partner logos"
-              src="/web3globalconference.svg"
-            />
-            <img
-              className="h-6 sm:h-8 md:h-[30px] w-auto object-contain"
-              alt="Partner logos"
-              src="/ETHiopian.svg"
+              src="/Propel Logo White.png"
 
             />
            
@@ -84,6 +68,8 @@ export const HomePage = (): JSX.Element => {
         <StatisticsSection />
         <ImpactFiguresSection />
         <TestimonialsSection />
+
+        <CoreTeamSection />
 
         <PartnershipsSection />
 

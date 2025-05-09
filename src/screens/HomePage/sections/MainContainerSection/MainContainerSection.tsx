@@ -16,8 +16,8 @@ export const MainContainerSection = (): JSX.Element => {
     <header className="flex w-full items-center justify-between px-4 md:px-8 lg:px-16 py-4 sticky top-0 z-50 bg-[#060606]">
       {/* Logo and Brand Name */}
       <div className="flex items-center gap-3">
-        <div className="relative w-[3rem] h-[3.5rem] bg-[url(/vector-268.svg)] bg-[100%_100%]">
-          <div className="relative w-[1.7rem] h-[1.7rem] top-3.5 left-[0.5rem] bg-[url(/intersect.svg)] bg-[100%_100%]" />
+        <div className="relative w-[3.5rem] h-[3.5rem] flex items-center justify-center">
+          <img src="/logo-ABC.png" alt="ABC Logo" className="w-full h-full object-contain" />
         </div>
 
         <div className="flex flex-col items-start justify-center gap-1">
