@@ -1,0 +1,1 @@
+export { CoreTeamSection } from "./CoreTeamSection";

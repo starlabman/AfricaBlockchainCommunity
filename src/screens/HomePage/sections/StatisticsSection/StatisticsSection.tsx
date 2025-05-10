@@ -45,28 +45,27 @@ export const StatisticsSection = (): JSX.Element => {
             viewport={{ once: true }}
             whileHover={{
               scale: 1.02,
-              boxShadow: "0 8px 16px rgba(45, 110, 247, 0.15)",
               transition: { type: "spring", stiffness: 200, damping: 15 },
             }}
             className="w-full"
           >
-            <Card className="bg-white border border-gray-100 rounded-2xl shadow-sm hover:bg-[#f9f9ff] h-full">
-              <CardContent className="p-4 sm:p-6 flex flex-col gap-6">
+            <Card className="bg-transparent hover:bg-white/40 backdrop-blur-sm h-full transition-all duration-300 group">
+              <CardContent className="p-6 sm:p-8 flex flex-col gap-10">
                 {/* Icon centered */}
-                <div className="flex justify-center">{stat.icon}</div>
+                <div className="flex justify-center transition-transform duration-300 group-hover:scale-110">{stat.icon}</div>
 
                 {/* Stat number */}
-                <div className="flex justify-center items-baseline space-x-1 text-[#2d6ef7]">
+                <div className="flex justify-center items-baseline space-x-1 text-[#2d6ef7] transition-all duration-300 group-hover:translate-y-[-4px]">
                   <span className="text-3xl sm:text-4xl font-bold">+</span>
                   <span className="text-4xl sm:text-5xl font-bold">{stat.number}</span>
                 </div>
 
                 {/* Title & description */}
-                <div className="space-y-3">
-                  <h3 className="text-base sm:text-lg font-semibold text-[#060606] text-center">
+                <div className="space-y-3 transition-all duration-300 group-hover:translate-y-[-2px]">
+                  <h3 className="text-base sm:text-lg font-semibold text-[#060606] text-center group-hover:text-[#2d6ef7] transition-colors duration-300">
                     {stat.title}
                   </h3>
-                  <p className="text-[#6d6d88] text-sm sm:text-base leading-relaxed text-center">
+                  <p className="text-[#6d6d88] text-sm sm:text-base leading-relaxed text-center group-hover:text-gray-700 transition-colors duration-300">
                     {stat.description}
                   </p>
                 </div>

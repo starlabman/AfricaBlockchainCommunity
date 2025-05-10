@@ -40,7 +40,7 @@ const slides = [
         role: "Lead Blockchain Developer",
         text: "Mastering Smart Contract Development: From Basics to Advanced Patterns",
         ctaText: "Reserve Your Spot",
-        ctaLink: "https://example.com/webinar"
+        ctaLink: "https://lu.ma/Afroblockchain"
       },
       {
         badge: "Upcoming AMA",
@@ -48,7 +48,7 @@ const slides = [
         role: "Industry Leaders",
         text: "Web3 Career Paths: Opportunities and Growth in Blockchain",
         ctaText: "Register Now",
-        ctaLink: "https://example.com/ama"
+        ctaLink: "https://lu.ma/Afroblockchain"
       }
     ]
   },
