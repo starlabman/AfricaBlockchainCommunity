@@ -3,112 +3,117 @@ import { motion } from "framer-motion";
 
 const partnerLogos = [
   {
-    id: 0,
-    type: "image",
-    src: "/ETHAfrique.png",
-  },
-  {
     id: 1,
-    type: "background",
-    style: "bg-[url(/kilingiants.svg)]",
+    type: "image",
+    src: "/satoshi3.png",
   },
   {
     id: 2,
     type: "image",
-    src: "/ETHiopian.svg",
+    src: "/ETHAfrique.png",
   },
   {
     id: 3,
-    type: "image",
-    src: "/CodeAfrica.png",
+    type: "background",
+    style: "bg-[url(/kilingiants.svg)]",
   },
   {
     id: 4,
-    type: "background",
-    style: "bg-[url(/web3pak.svg)]",
+    type: "image",
+    src: "/ETHiopian.svg",
   },
   {
     id: 5,
     type: "image",
-    src: "/Propel-Logo-Black.png",
+    src: "/CodeAfrica.png",
   },
   {
     id: 6,
-    type: "image",
-    src: "/icp.svg",
+    type: "background",
+    style: "bg-[url(/web3pak.svg)]",
   },
   {
     id: 7,
     type: "image",
-    src: "/web3globalconference.svg"
+    src: "/Propel-Logo-Black.png",
   },
   {
     id: 8,
     type: "image",
-    src:"starknet.svg"
+    src: "/icp.svg",
   },
   {
     id: 9,
     type: "image",
-    src: "web3bridge.jpg"
+    src: "/web3globalconference.svg"
   },
   {
     id: 10,
-    type:"image",
-    src: "python_Togo.png"
+    type: "image",
+    src:"starknet.svg"
   },
   {
     id: 11,
-    type:"image",
-    src: "stellar.png"
+    type: "image",
+    src: "web3bridge.jpg"
   },
   {
     id: 12,
     type:"image",
+    src: "python_Togo.png"
+  },
+  {
+    id: 13,
+    type:"image",
+    src: "stellar.png"
+  },
+  {
+    id: 14,
+    type:"image",
     src: "BaseWorkshop.png"
-  },
-  {
-    id:13,
-    type: "image",
-    src: "dev3pack.png"
-  },
-  {
-    id:14,
-    type: "image",
-    src: "Africhain.png"
   },
   {
     id:15,
     type: "image",
-    src: "TrustWallet.png"
+    src: "dev3pack.png"
   },
   {
     id:16,
     type: "image",
+    src: "Africhain.png"
+  },
+  {
+    id:17,
+    type: "image",
+    src: "TrustWallet.png"
+  },
+  {
+    id:18,
+    type: "image",
     src: "ElloQuest.png"
-  },
-  {
-    id: 17,
-    type: "image",
-    src: "SuiAfrica.png"
-  },
-  {
-    id: 18,
-    type: "image",
-    src: "SuiRDC.png"
   },
   {
     id: 19,
     type: "image",
-    src: "SuiBenin.png"
+    src: "SuiAfrica.png"
   },
   {
     id: 20,
     type: "image",
-    src: "EthNigeria.png"
+    src: "SuiRDC.png"
   },
   {
     id: 21,
+    type: "image",
+    src: "SuiBenin.png"
+  },
+  {
+    id: 22,
+    type: "image",
+    src: "EthNigeria.png"
+  },
+  {
+    id: 23,
     type: "image",
     src: "icphubs.png"
   }
@@ -145,7 +150,7 @@ export const TestimonialsSection = (): JSX.Element => {
           {/* Texte d'intro */}
           <div className="lg:max-w-xl space-y-4 sm:space-y-6">
             <p className="text-[#4e5cbc] text-sm sm:text-base font-medium">
-              Our Partners
+              Our Partners 
             </p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#060606] leading-[1.2]">
               They Believe in Us and Support Our Vision

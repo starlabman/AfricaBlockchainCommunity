@@ -58,7 +58,7 @@ export const GeneralInfoSection = (): JSX.Element => {
     },
     {
       id: 3,
-      href: "https://wa.me/+22898244850",
+      href: "https://chat.whatsapp.com/JnmA8tsSiDlCphw9jXZdym",
       src: "/whatsapp.svg", // Vous devrez remplacer cette image par celle de WhatsApp
       alt: "WhatsApp",
       color: "#25D366"
