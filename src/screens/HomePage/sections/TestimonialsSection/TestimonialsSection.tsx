@@ -116,7 +116,17 @@ const partnerLogos = [
     id: 23,
     type: "image",
     src: "icphubs.png"
-  }
+  },
+  {
+    id: 24,
+    type: "image",
+    src: "Coin.png"
+  },
+  {
+    id: 25,
+    type: "image",
+    src: "AMB-Logo.png"
+  },
 ];
 
 export const TestimonialsSection = (): JSX.Element => {
